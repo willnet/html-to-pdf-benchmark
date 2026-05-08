@@ -1,0 +1,16 @@
+services:
+  benchmark:
+    build:
+      context: .
+    image: h2p-benchmark
+    environment:
+      CHROME_BIN: /usr/bin/chromium
+      GROVER_NO_SANDBOX: "true"
+      PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium
+      PUPPETEER_SKIP_DOWNLOAD: "true"
+      WKHTMLTOPDF_BIN: /usr/bin/wkhtmltopdf
+      PDF_OUTPUT_DIR: /app/results/pdf
+    shm_size: 1gb
+    volumes:
+      - ./results:/app/results
+      - ./tmp:/app/tmp

@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.expand_path("../lib", __dir__))
+
+require "benchmark_runner"
+require "chart_reporter"
+
+result = BenchmarkRunner.new(ARGV).run
+
+if result[:results_count].zero?
+  warn "No benchmark results were generated; chart report was skipped."
+  exit 1
+end
+
+ChartReporter.new([result.fetch(:csv_path)]).run

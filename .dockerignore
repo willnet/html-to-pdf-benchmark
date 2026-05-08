@@ -1,0 +1,9 @@
+.git
+.ruby-lsp
+.DS_Store
+node_modules
+results
+tmp
+*.log
+Dockerfile
+docker-compose.yml

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Fixture</title>
+    <style>
+      body { font-family: sans-serif; margin: 24px; color: #111827; }
+      .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .card { border: 1px solid #d1d5db; border-radius: 12px; padding: 12px; }
+      .score { font-size: 28px; color: #2563eb; }
+    </style>
+  </head>
+  <body>
+    <h1>JS Fixture</h1>
+    <p>This page is intentionally populated by JavaScript at runtime.</p>
+    <div id="cards" class="cards"></div>
+    <script>
+      const root = document.getElementById("cards");
+      for (let i = 1; i <= 12; i += 1) {
+        const card = document.createElement("section");
+        card.className = "card";
+        card.innerHTML = `<h2>Card ${i}</h2><div class="score">${i * 17}</div><p>Generated on the client side.</p>`;
+        root.appendChild(card);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+engines:
+  - wkhtmltopdf
+  - grover
+  - ferrum_pdf
+
+cases:
+  - medium
+
+all_cases:
+  - light
+  - medium
+  - heavy
+  - js
+
+modes:
+  - cold
+  - warm
+
+iterations: 10
+
+concurrency:
+  - 1
+  - 4
+
+threads:
+  - 1
+  - 4
+
+timeout_sec: 60
+sample_interval_sec: 0.1
+
+output_dir: results

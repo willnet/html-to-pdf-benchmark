@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Heavy Fixture</title>
+    <style>
+      @page { size: A4; margin: 12mm; }
+      body { font-family: sans-serif; color: #111827; }
+      h1 { margin: 0 0 10px; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .card {
+        padding: 12px;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #ffffff, #f8fafc);
+      }
+      table { width: 100%; border-collapse: collapse; font-size: 11px; }
+      th, td { border: 1px solid #d1d5db; padding: 6px; }
+      th { position: sticky; top: 0; background: #eff6ff; }
+      .break { page-break-before: always; }
+      .chart { width: 100%; height: 220px; margin: 18px 0; }
+      .appendix { margin-top: 18px; }
+      .appendix h2 { margin: 18px 0 8px; font-size: 16px; }
+      .appendix-block { border: 1px solid #cbd5e1; border-radius: 10px; margin-bottom: 10px; padding: 10px; background: linear-gradient(180deg, #ffffff, #f1f5f9); font-size: 11px; line-height: 1.55; }
+      .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 8px; }
+      .metric { border: 1px solid #dbeafe; background: #eff6ff; padding: 6px; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>Heavy Fixture</h1>
+    <section class="grid">
+      <div class="card"><strong>Layout</strong><p>Multiple sections with gradients and borders.</p></div>
+      <div class="card"><strong>Volume</strong><p>Long table intended to span several pages.</p></div>
+      <div class="card"><strong>Goal</strong><p>Stress pagination and rasterization cost.</p></div>
+    </section>
+
+    <svg class="chart" viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
+      <rect width="800" height="220" fill="#f8fafc" />
+      <g stroke="#cbd5e1">
+        <line x1="40" y1="20" x2="40" y2="180"/>
+        <line x1="40" y1="180" x2="760" y2="180"/>
+      </g>
+      <polyline fill="none" stroke="#2563eb" stroke-width="4" points="40,160 120,120 200,135 280,90 360,100 440,70 520,85 600,45 680,60 760,30"/>
+      <polyline fill="none" stroke="#16a34a" stroke-width="4" points="40,150 120,145 200,120 280,125 360,95 440,100 520,75 600,70 680,65 760,55"/>
+    </svg>
+
+    <table>
+      <thead>
+        <tr><th>#</th><th>Region</th><th>Owner</th><th>Description</th><th>Amount</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>North</td><td>Alice</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1001</td><td>open</td></tr>
+        <tr><td>2</td><td>South</td><td>Bob</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1002</td><td>open</td></tr>
+        <tr><td>3</td><td>East</td><td>Carol</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1003</td><td>open</td></tr>
+        <tr><td>4</td><td>West</td><td>Dave</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1004</td><td>open</td></tr>
+        <tr><td>5</td><td>North</td><td>Eve</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1005</td><td>open</td></tr>
+        <tr><td>6</td><td>South</td><td>Frank</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1006</td><td>open</td></tr>
+        <tr><td>7</td><td>East</td><td>Grace</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1007</td><td>open</td></tr>
+        <tr><td>8</td><td>West</td><td>Heidi</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1008</td><td>open</td></tr>
+        <tr><td>9</td><td>North</td><td>Ivan</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1009</td><td>open</td></tr>
+        <tr><td>10</td><td>South</td><td>Judy</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1010</td><td>open</td></tr>
+        <tr><td>11</td><td>East</td><td>Karl</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1011</td><td>open</td></tr>
+        <tr><td>12</td><td>West</td><td>Liam</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1012</td><td>open</td></tr>
+        <tr><td>13</td><td>North</td><td>Mia</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1013</td><td>open</td></tr>
+        <tr><td>14</td><td>South</td><td>Noah</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1014</td><td>open</td></tr>
+        <tr><td>15</td><td>East</td><td>Olivia</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1015</td><td>open</td></tr>
+        <tr><td>16</td><td>West</td><td>Peggy</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1016</td><td>open</td></tr>
+        <tr><td>17</td><td>North</td><td>Quinn</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1017</td><td>open</td></tr>
+        <tr><td>18</td><td>South</td><td>Ruth</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1018</td><td>open</td></tr>
+        <tr><td>19</td><td>East</td><td>Sybil</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1019</td><td>open</td></tr>
+        <tr><td>20</td><td>West</td><td>Trent</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1020</td><td>open</td></tr>
+        <tr><td>21</td><td>North</td><td>Uma</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1021</td><td>open</td></tr>
+        <tr><td>22</td><td>South</td><td>Victor</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1022</td><td>open</td></tr>
+        <tr><td>23</td><td>East</td><td>Wendy</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1023</td><td>open</td></tr>
+        <tr><td>24</td><td>West</td><td>Xavier</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1024</td><td>open</td></tr>
+        <tr><td>25</td><td>North</td><td>Yuki</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1025</td><td>open</td></tr>
+        <tr><td>26</td><td>South</td><td>Zane</td><td>Heavy fixture benchmark row with enough text to produce wider layout pressure and repeated paint cost.</td><td>1026</td><td>open</td></tr>
+      </tbody>
+    </table>
+
+    <div class="break"></div>
+
+    <table>
+      <thead>
+        <tr><th>#</th><th>Region</th><th>Owner</th><th>Description</th><th>Amount</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>27</td><td>North</td><td>Alice</td><td>Repeated content to increase output size and page count.</td><td>2027</td><td>closed</td></tr>
+        <tr><td>28</td><td>South</td><td>Bob</td><td>Repeated content to increase output size and page count.</td><td>2028</td><td>closed</td></tr>
+        <tr><td>29</td><td>East</td><td>Carol</td><td>Repeated content to increase output size and page count.</td><td>2029</td><td>closed</td></tr>
+        <tr><td>30</td><td>West</td><td>Dave</td><td>Repeated content to increase output size and page count.</td><td>2030</td><td>closed</td></tr>
+        <tr><td>31</td><td>North</td><td>Eve</td><td>Repeated content to increase output size and page count.</td><td>2031</td><td>closed</td></tr>
+        <tr><td>32</td><td>South</td><td>Frank</td><td>Repeated content to increase output size and page count.</td><td>2032</td><td>closed</td></tr>
+        <tr><td>33</td><td>East</td><td>Grace</td><td>Repeated content to increase output size and page count.</td><td>2033</td><td>closed</td></tr>
+        <tr><td>34</td><td>West</td><td>Heidi</td><td>Repeated content to increase output size and page count.</td><td>2034</td><td>closed</td></tr>
+        <tr><td>35</td><td>North</td><td>Ivan</td><td>Repeated content to increase output size and page count.</td><td>2035</td><td>closed</td></tr>
+        <tr><td>36</td><td>South</td><td>Judy</td><td>Repeated content to increase output size and page count.</td><td>2036</td><td>closed</td></tr>
+        <tr><td>37</td><td>East</td><td>Karl</td><td>Repeated content to increase output size and page count.</td><td>2037</td><td>closed</td></tr>
+        <tr><td>38</td><td>West</td><td>Liam</td><td>Repeated content to increase output size and page count.</td><td>2038</td><td>closed</td></tr>
+        <tr><td>39</td><td>North</td><td>Mia</td><td>Repeated content to increase output size and page count.</td><td>2039</td><td>closed</td></tr>
+        <tr><td>40</td><td>South</td><td>Noah</td><td>Repeated content to increase output size and page count.</td><td>2040</td><td>closed</td></tr>
+        <tr><td>41</td><td>East</td><td>Olivia</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2041</td><td>closed</td></tr>
+        <tr><td>42</td><td>West</td><td>Peggy</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2042</td><td>closed</td></tr>
+        <tr><td>43</td><td>North</td><td>Quinn</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2043</td><td>closed</td></tr>
+        <tr><td>44</td><td>South</td><td>Ruth</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2044</td><td>closed</td></tr>
+        <tr><td>45</td><td>East</td><td>Sybil</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2045</td><td>closed</td></tr>
+        <tr><td>46</td><td>West</td><td>Trent</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2046</td><td>closed</td></tr>
+        <tr><td>47</td><td>North</td><td>Uma</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2047</td><td>closed</td></tr>
+        <tr><td>48</td><td>South</td><td>Victor</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2048</td><td>closed</td></tr>
+        <tr><td>49</td><td>East</td><td>Wendy</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2049</td><td>closed</td></tr>
+        <tr><td>50</td><td>West</td><td>Xavier</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2050</td><td>closed</td></tr>
+        <tr><td>51</td><td>North</td><td>Yuki</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2051</td><td>closed</td></tr>
+        <tr><td>52</td><td>South</td><td>Zane</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2052</td><td>closed</td></tr>
+        <tr><td>53</td><td>East</td><td>Alice</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2053</td><td>closed</td></tr>
+        <tr><td>54</td><td>West</td><td>Bob</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2054</td><td>closed</td></tr>
+        <tr><td>55</td><td>North</td><td>Carol</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2055</td><td>closed</td></tr>
+        <tr><td>56</td><td>South</td><td>Dave</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2056</td><td>closed</td></tr>
+        <tr><td>57</td><td>East</td><td>Eve</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2057</td><td>closed</td></tr>
+        <tr><td>58</td><td>West</td><td>Frank</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2058</td><td>closed</td></tr>
+        <tr><td>59</td><td>North</td><td>Grace</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2059</td><td>closed</td></tr>
+        <tr><td>60</td><td>South</td><td>Heidi</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2060</td><td>closed</td></tr>
+        <tr><td>61</td><td>East</td><td>Ivan</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2061</td><td>closed</td></tr>
+        <tr><td>62</td><td>West</td><td>Judy</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2062</td><td>closed</td></tr>
+        <tr><td>63</td><td>North</td><td>Karl</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2063</td><td>closed</td></tr>
+        <tr><td>64</td><td>South</td><td>Liam</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2064</td><td>closed</td></tr>
+        <tr><td>65</td><td>East</td><td>Mia</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2065</td><td>closed</td></tr>
+        <tr><td>66</td><td>West</td><td>Noah</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2066</td><td>closed</td></tr>
+        <tr><td>67</td><td>North</td><td>Olivia</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2067</td><td>closed</td></tr>
+        <tr><td>68</td><td>South</td><td>Peggy</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2068</td><td>closed</td></tr>
+        <tr><td>69</td><td>East</td><td>Quinn</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2069</td><td>closed</td></tr>
+        <tr><td>70</td><td>West</td><td>Ruth</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2070</td><td>closed</td></tr>
+        <tr><td>71</td><td>North</td><td>Sybil</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2071</td><td>closed</td></tr>
+        <tr><td>72</td><td>South</td><td>Trent</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2072</td><td>closed</td></tr>
+        <tr><td>73</td><td>East</td><td>Uma</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2073</td><td>closed</td></tr>
+        <tr><td>74</td><td>West</td><td>Victor</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2074</td><td>closed</td></tr>
+        <tr><td>75</td><td>North</td><td>Wendy</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2075</td><td>closed</td></tr>
+        <tr><td>76</td><td>South</td><td>Xavier</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2076</td><td>closed</td></tr>
+        <tr><td>77</td><td>East</td><td>Yuki</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2077</td><td>closed</td></tr>
+        <tr><td>78</td><td>West</td><td>Zane</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2078</td><td>closed</td></tr>
+        <tr><td>79</td><td>North</td><td>Alice</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2079</td><td>closed</td></tr>
+        <tr><td>80</td><td>South</td><td>Bob</td><td>Expanded heavy fixture row with longer repeated operational notes, multiple values, and deliberately dense table layout.</td><td>2080</td><td>closed</td></tr>
+        <tr><td>81</td><td>East</td><td>Carol</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2081</td><td>closed</td></tr>
+        <tr><td>82</td><td>West</td><td>Dave</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2082</td><td>closed</td></tr>
+        <tr><td>83</td><td>North</td><td>Eve</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2083</td><td>closed</td></tr>
+        <tr><td>84</td><td>South</td><td>Frank</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2084</td><td>closed</td></tr>
+        <tr><td>85</td><td>East</td><td>Grace</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2085</td><td>closed</td></tr>
+        <tr><td>86</td><td>West</td><td>Heidi</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2086</td><td>closed</td></tr>
+        <tr><td>87</td><td>North</td><td>Ivan</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2087</td><td>closed</td></tr>
+        <tr><td>88</td><td>South</td><td>Judy</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2088</td><td>closed</td></tr>
+        <tr><td>89</td><td>East</td><td>Karl</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2089</td><td>closed</td></tr>
+        <tr><td>90</td><td>West</td><td>Liam</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2090</td><td>closed</td></tr>
+        <tr><td>91</td><td>North</td><td>Mia</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2091</td><td>closed</td></tr>
+        <tr><td>92</td><td>South</td><td>Noah</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2092</td><td>closed</td></tr>
+        <tr><td>93</td><td>East</td><td>Olivia</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2093</td><td>closed</td></tr>
+        <tr><td>94</td><td>West</td><td>Peggy</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2094</td><td>closed</td></tr>
+        <tr><td>95</td><td>North</td><td>Quinn</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2095</td><td>closed</td></tr>
+        <tr><td>96</td><td>South</td><td>Ruth</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2096</td><td>closed</td></tr>
+        <tr><td>97</td><td>East</td><td>Sybil</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2097</td><td>closed</td></tr>
+        <tr><td>98</td><td>West</td><td>Trent</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2098</td><td>closed</td></tr>
+        <tr><td>99</td><td>North</td><td>Uma</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2099</td><td>closed</td></tr>
+        <tr><td>100</td><td>South</td><td>Victor</td><td>High-volume heavy fixture row with audit comments, reconciliation notes, ownership metadata, and extra text for layout pressure.</td><td>2100</td><td>closed</td></tr>
+      </tbody>
+    </table>
+
+    <section class="appendix break">
+      <h2>Heavy Appendix A</h2>
+      <div class="appendix-block"><strong>Operations narrative 01</strong><p>This heavy fixture intentionally includes many styled blocks, dense prose, and repeated metric cells so file size, DOM size, pagination, and paint cost are visibly larger than the medium case.</p><div class="metrics"><span class="metric">north: 1842</span><span class="metric">south: 1934</span><span class="metric">east: 2051</span><span class="metric">west: 2118</span></div></div>
+      <div class="appendix-block"><strong>Operations narrative 02</strong><p>Each appendix block creates a bordered region with gradient backgrounds and nested grid content. The repeated structure is static HTML to keep benchmark input deterministic.</p><div class="metrics"><span class="metric">queue: 47</span><span class="metric">alerts: 13</span><span class="metric">reviews: 86</span><span class="metric">exports: 129</span></div></div>
+      <div class="appendix-block"><strong>Operations narrative 03</strong><p>Longer reports usually combine tables, summaries, exceptions, and explanatory text. This section mimics that shape without loading any remote assets or external fonts.</p><div class="metrics"><span class="metric">alpha: 72%</span><span class="metric">bravo: 68%</span><span class="metric">charlie: 81%</span><span class="metric">delta: 76%</span></div></div>
+      <div class="appendix-block"><strong>Operations narrative 04</strong><p>PDF converters must paginate these blocks across multiple pages and preserve border radius, color fills, table borders, and typographic spacing.</p><div class="metrics"><span class="metric">open: 214</span><span class="metric">closed: 389</span><span class="metric">pending: 61</span><span class="metric">blocked: 17</span></div></div>
+      <div class="appendix-block"><strong>Operations narrative 05</strong><p>The payload is intentionally much larger than the previous nine kilobyte heavy fixture while remaining small enough for routine benchmark runs.</p><div class="metrics"><span class="metric">p50: 118ms</span><span class="metric">p75: 174ms</span><span class="metric">p95: 263ms</span><span class="metric">p99: 441ms</span></div></div>
+      <div class="appendix-block"><strong>Operations narrative 06</strong><p>Nested grid values add extra layout nodes and inline text runs. This better separates heavy from medium when comparing rendering overhead across engines.</p><div class="metrics"><span class="metric">batch: 16</span><span class="metric">items: 942</span><span class="metric">errors: 8</span><span class="metric">retries: 31</span></div></div>
+      <div class="appendix-block"><strong>Operations narrative 07</strong><p>Content uses plain ASCII and local markup only. That makes fixture changes easy to audit and avoids network variability in timing measurements.</p><div class="metrics"><span class="metric">cpu: 54%</span><span class="metric">rss: 318MB</span><span class="metric">io: 24MB</span><span class="metric">pages: 12</span></div></div>
+      <div class="appendix-block"><strong>Operations narrative 08</strong><p>Additional narrative copy fills pages similarly to internal audit reports, monthly operational exports, or compliance review packets.</p><div class="metrics"><span class="metric">case A</span><span class="metric">case B</span><span class="metric">case C</span><span class="metric">case D</span></div></div>
+      <div class="appendix-block"><strong>Operations narrative 09</strong><p>Repeated row and block structures also make resulting PDF byte size more representative than a short single-page document.</p><div class="metrics"><span class="metric">red: 12</span><span class="metric">blue: 34</span><span class="metric">green: 56</span><span class="metric">amber: 78</span></div></div>
+      <div class="appendix-block"><strong>Operations narrative 10</strong><p>The heavy fixture now contains enough static markup to justify its name when viewed by file size alone, before even considering rendered page count.</p><div class="metrics"><span class="metric">northwest</span><span class="metric">northeast</span><span class="metric">southwest</span><span class="metric">southeast</span></div></div>
+      <h2>Heavy Appendix B</h2>
+      <div class="appendix-block"><strong>Reconciliation detail 11</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>The repeated static content makes the input payload meaningfully larger while exercising the same rendering path as real report sections.</p><div class="metrics"><span class="metric">ledger: A-100</span><span class="metric">owner: team one</span><span class="metric">risk: medium</span><span class="metric">state: accepted</span></div></div>
+      <div class="appendix-block"><strong>Reconciliation detail 12</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>Large tables alone are not always representative, so this fixture mixes tabular data with card-like narrative blocks and metric grids.</p><div class="metrics"><span class="metric">ledger: B-200</span><span class="metric">owner: team two</span><span class="metric">risk: high</span><span class="metric">state: pending</span></div></div>
+      <div class="appendix-block"><strong>Reconciliation detail 13</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>Pagination should cross section boundaries several times, forcing engines to split block layout and table layout in the same conversion.</p><div class="metrics"><span class="metric">ledger: C-300</span><span class="metric">owner: team three</span><span class="metric">risk: low</span><span class="metric">state: reviewed</span></div></div>
+      <div class="appendix-block"><strong>Reconciliation detail 14</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>The data remains deterministic and local, which keeps benchmark comparisons focused on renderer behavior rather than network or asset cache effects.</p><div class="metrics"><span class="metric">ledger: D-400</span><span class="metric">owner: team four</span><span class="metric">risk: medium</span><span class="metric">state: exported</span></div></div>
+      <div class="appendix-block"><strong>Reconciliation detail 15</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>Inline spans and nested grid items add more nodes for style calculation, layout, painting, and PDF serialization.</p><div class="metrics"><span class="metric">ledger: E-500</span><span class="metric">owner: team five</span><span class="metric">risk: high</span><span class="metric">state: escalated</span></div></div>
+      <div class="appendix-block"><strong>Reconciliation detail 16</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>This fixture is still intentionally modest compared with production documents, but it is no longer close to the medium case by raw bytes.</p><div class="metrics"><span class="metric">ledger: F-600</span><span class="metric">owner: team six</span><span class="metric">risk: low</span><span class="metric">state: archived</span></div></div>
+      <div class="appendix-block"><strong>Reconciliation detail 17</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>When rendering performance differs by engine, the larger fixture should make those differences easier to observe in duration and memory charts.</p><div class="metrics"><span class="metric">ledger: G-700</span><span class="metric">owner: team seven</span><span class="metric">risk: medium</span><span class="metric">state: sampled</span></div></div>
+      <div class="appendix-block"><strong>Reconciliation detail 18</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>Dense prose and repeated metrics are easier to maintain in source control than embedded binary assets, while still increasing fixture size.</p><div class="metrics"><span class="metric">ledger: H-800</span><span class="metric">owner: team eight</span><span class="metric">risk: low</span><span class="metric">state: approved</span></div></div>
+      <div class="appendix-block"><strong>Reconciliation detail 19</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>The heavy case should now be clearly distinguishable during quick inspection with file-size tools and during actual PDF generation.</p><div class="metrics"><span class="metric">ledger: I-900</span><span class="metric">owner: team nine</span><span class="metric">risk: high</span><span class="metric">state: verified</span></div></div>
+      <div class="appendix-block"><strong>Reconciliation detail 20</strong><p>Heavy appendix detail includes exception notes, reviewer comments, accounting references, and explanatory text that intentionally spans multiple lines after wrapping in an A4 page.</p><p>These final reconciliation details close the heavy appendix with another page worth of structured report content.</p><div class="metrics"><span class="metric">ledger: J-1000</span><span class="metric">owner: team ten</span><span class="metric">risk: medium</span><span class="metric">state: complete</span></div></div>
+    </section>
+  </body>
+</html>

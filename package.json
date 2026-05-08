@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "benchmark": "bundle exec ruby bin/run_benchmark_report"
+  },
+  "dependencies": {
+    "puppeteer": "^24.0.0"
+  }
+}
